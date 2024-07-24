@@ -21,7 +21,7 @@ app.get("/:username",async (req,res)=>{
 
 app.get("/cnedata/:nacionalidad/:cedula", async(req,res)=>{
     let {nacionalidad, cedula}=req.params
-    const url = `http://www.cne.gob.ve/web/registro_electoral/ce.php?nacionalidad=${nacionalidad}&cedula=${cedula}`
+    const url = `http://www.cne.gob.ve/web/registro_electoral/ce.php?nacionalidad=${nacionalidad.toUpperCase()}&cedula=${cedula}`
   try {
     console.log(`Consultando ${nacionalidad}-${cedula}`)
     const resp = await fetch(url, { headers: { "Access-Control-Allow-Origin": "*" } })  
