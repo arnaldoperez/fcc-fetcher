@@ -1,1 +1,4 @@
 node_modules/
+googleKey.json
+.env
+firebase-key.json
