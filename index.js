@@ -9,7 +9,7 @@ const multer = require('multer') // v1.0.5
 const upload = multer() // for parsing multipart/form-data
 
 var admin = require("firebase-admin");
-var serviceAccount = require(`./${process.env.FIREBASE_KEY}`);
+var serviceAccount = require(`${process.env.FIREBASE_KEY}`);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
